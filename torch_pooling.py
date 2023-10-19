@@ -50,14 +50,3 @@ def torch_pooling(A_prev, hparameters, mode="max"):
 
     return A
 
-# Test and debug the function with a dummy tensor
-if __name__ == "__main__":
-    torch.manual_seed(1)  # for reproducibility
-    A_prev_torch = torch.randn(2, 3, 5, 5)  # creating a random tensor
-    hparameters = {"f": 3, "stride": 1}
-
-    # Test the function
-    A_torch = torch_pooling(A_prev_torch, hparameters, mode="max")
-    print("Max pooling result: \n", A_torch)
-    A_torch = torch_pooling(A_prev_torch, hparameters, mode="average")
-    print("Average pooling result: \n", A_torch)
