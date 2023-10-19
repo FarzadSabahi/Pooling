@@ -52,5 +52,3 @@ def tf_pooling(A_prev, hparameters, mode="average"):
     cache = (A_prev, hparameters)
     
     return A, cache
-
-# The rest of the code would be testing this function with appropriate input.
